@@ -7733,6 +7733,7 @@ fabric.PatternBrush = fabric.util.createClass(fabric.PencilBrush, /** @lends fab
     initialize: function(el, options) {
       options || (options = { });
 
+fabric.document = (el && el.ownerDocument) || fabric.document;
       this._initStatic(el, options);
       this._initInteractive();
       this._createCacheCanvas();
